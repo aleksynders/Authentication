@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Authentication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+         WindowStartupLocation="CenterScreen"
+        Title="Авторизация" Height="450" Width="800" WindowStyle="ToolWindow">
     <Grid>
         <Grid x:Name="Autorizate">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="350">
                 <TextBlock FontSize="32" HorizontalAlignment="Center" FontWeight="SemiBold">Авторизация</TextBlock>
                 <StackPanel Margin="10">
                     <GroupBox Header="Введите логин" FontSize="26">
@@ -20,6 +21,7 @@
                 </StackPanel>
                 <StackPanel>
                     <Button x:Name="BtnAutorizate" Content="Авторизация" Width="150" Height="28" FontSize="16" Click="BtnAutorizate_Click"/>
+                    <TextBlock x:Name="tbNewCode" Text="Получить новый код можно будет через 60 секунд" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Visibility="Collapsed"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
